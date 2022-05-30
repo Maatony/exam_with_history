@@ -4,7 +4,7 @@ Build a web application that people can use to report technical issues.
 
 ## Highlights
 
-People can use a form to submit a new error report. This report is then saved to the database and added to the frontend table for others to see. Reporters can create as many reports as they want, but each hanlder can only have a maximum of 5 assigned to them at any time.
+People can use a form to submit a new error report. This report is then saved to the database and added to the frontend table for others to see. Users can create as many reports as they want, but each user can only handle a maximum of 5 reports assigned to them at any time.
 
 ## Database
 
