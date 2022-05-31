@@ -122,7 +122,7 @@ Example query:
 ```json
 {
     "result": "ok",
-    "tickets": []
+    "reports": []
 }
 ```
 
