@@ -64,7 +64,7 @@ This endpoint should
 - redirect to `GET /list` to see newly added report
 - redirect to `GET /` if data validation fails and supply the endpoint with an error message: `validation failed`
 
-### POST `/complete/{id}`
+### DELETE `/complete/{id}`
 
 - This endpoint should delete the specified report if the request's body contains
 ```json
