@@ -2,6 +2,32 @@
 
 Build a web application that people can use to report technical issues.
 
+## Getting Started
+
+- **Fork** this repository under your own account
+- Clone your forked repository to your computer
+- Create a `.gitignore` file so generated files won't be committed
+- Commit your progress frequently and with descriptive commit messages
+- All your answers and solutions should go in this repository
+- Take care of style guide
+- Take care of the naming of classes, fields, variables, files, etc.
+
+## Keep in mind
+
+- You can use any resource online, but **please work individually**
+
+- **Don't just copy-paste** your answers and solutions,
+  you need to understand every line of your code
+- **Don't push your work** to GitHub until your mentor announces
+  that the time is up
+- At the end of the exam push your solution to **GitHub**
+
+## Classroom rules
+
+- Only **1** person at a time may leave to smoke, so be considerate of your fellow smokers and take short breaks.
+- Only **1** person was use each restroom at a time, so up to 4 may go at any time (2 male/2 female restrooms on our floor).
+- Please let one of the mentors know where you are going before you leave the classroom.
+
 ## Highlights
 
 People can use a form to submit a new error report. This report is then saved to the database and added to the frontend table for others to see. Users can create as many reports as they want, but each user can only handle a maximum of 5 reports assigned to them at any time.
