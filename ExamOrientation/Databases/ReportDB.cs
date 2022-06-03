@@ -3,12 +3,12 @@ using ExamOrientation.Models;
 
 namespace ExamOrientation.Databases
 {
-    public class OEDb : DbContext
+    public class ReportDB : DbContext
     {
         public DbSet<User> Users { get; set; }
         public DbSet<Report> Reports { get; set; }
 
-        public OEDb(DbContextOptions options) : base(options) { }
+        public ReportDB(DbContextOptions options) : base(options) { }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

@@ -31,5 +31,5 @@ static void ConfigureDb(IServiceCollection services)
 {
     var config = services.BuildServiceProvider().GetRequiredService<IConfiguration>();
     var connectionString = config.GetConnectionString("Default");
-    services.AddDbContext<OEDb>(b => b.UseSqlServer(connectionString));
+    services.AddDbContext<ReportDB>(b => b.UseSqlServer(connectionString));
 }

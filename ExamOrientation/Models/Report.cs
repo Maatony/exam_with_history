@@ -9,7 +9,6 @@
         public DateTimeOffset Date { get; set; }
         public User Reporter { get; set; }
         public int ReporterId { get; set; }
-        public User Handler { get; set; }
-        public int HandlerId { get; set; }
+        public int Handler { get; set; }
     }
 }

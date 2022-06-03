@@ -2,6 +2,7 @@
 using ExamOrientation.Interfaces;
 using ExamOrientation.Services;
 using ExamOrientation.Models;
+using ExamOrientation.Data;
 
 namespace ExamOrientation.Controllers
 {
@@ -11,15 +12,16 @@ namespace ExamOrientation.Controllers
         private readonly IUserService userService;
         private readonly IReportService reportService;
 
-        // Dependency injection of XXX service
+        // Dependency injection of services
         public RESTController(IUserService usrSrv, IReportService rptSrv)
         {
             userService = usrSrv;
             reportService = rptSrv;
         }
 
+
         [HttpGet("reports")]
-        public IActionResult GetReports([FromRoute] string request)
+        public IActionResult GetReports([FromRoute] ReportAPI request)
         {
             return View();
         }

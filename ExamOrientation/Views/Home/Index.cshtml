@@ -1,11 +1,54 @@
-﻿<!DOCTYPE html>
+﻿@using ExamOrientation.ViewModels
+@using ExamOrientation.Models
+@model VMAddReport
+
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
     <title>Reporter App - let us know your problem</title>
 </head>
 <body>
+    @Html.ActionLink("Add new user?", "addUser", "Home")
+    <br />
+    @Html.ActionLink("List of reports", "GetList", "Home")
+
     <h1>Reporter App</h1>
-    
+    <form method="post" @Url.Action("AddReport", "Home")>
+        <label for="AddReport">Reporter</label><br />
+        @if(Model.Users.Count == 0)
+        {            
+            <input type="text" id="AddReport" name="Reporter" /><br />
+        }
+        else
+        {
+            <select id="AddReport">
+                @foreach(User user in Model.Users)
+                {
+                    <option value="@user.Name">@user.Name</option>
+                }
+            </select><br />
+        }
+
+        <label for="AddReport">Manufacturer</label><br />
+        <input type="text" id="AddReport" name="Manufacturer" /><br />
+
+        <label for="Add">Serial Number</label><br />
+        <input type="number" id="AddReport" name="SerialNumber" /><br />
+
+        <label for="Add">Description</label><br />
+        <input type="text" id="AddReport" name="Description" /><br />
+
+        <input type="submit" id="AddReport" value="Report"/>
+    </form>
+
+    <br />
+    @if(Model.Issue.Count() > 0)
+    {
+        @foreach (string issue in Model.Issue)
+        {
+            <h2>issue</h2>
+        }
+    }
 </body>
 </html>
