@@ -6,7 +6,8 @@ using ExamOrientation.Services;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddMvc();
-builder.Services.AddScoped<IXXXService, XXXService>();
+builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddScoped<IReportService, ReportService>();
 
 ConfigureDb(builder.Services);
 
