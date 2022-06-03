@@ -55,5 +55,30 @@ namespace ExamOrientation.Services
 
             return 200;
         }
+        public ReportsBack GetReportsForAPI(ReportFromAPI request)
+        {
+            ReportsBack reportsBack = new ReportsBack();
+            if (request == null)
+                return reportsBack;
+            else 
+            {
+                if (request.Reporter != null)
+                {
+                    reportsBack.Reports = ReportDb.Reports.Where(r => r.Reporter.Name.Contains(request.Reporter)).ToList();
+                    return reportsBack;
+                }
+                if (request.Handler != null)
+                {
+                    reportsBack.Reports = ReportDb.Reports.Where(r => r.Handler.Name.Contains(request.Handler)).ToList();
+                    return reportsBack;
+                }
+                if (request.Manufacturer != null)
+                {
+                    reportsBack.Reports = ReportDb.Reports.Where(r => r.Manufacturer.Contains(request.Manufacturer)).ToList();
+                    return reportsBack;
+                }
+            }
+|           return reportsBack
+        }
     }
 }

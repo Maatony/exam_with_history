@@ -185,3 +185,8 @@ Write an SQL query to select the name and the country of applicants from
 Hungary with the age over 40.
 
 (BONUS) Write an SQL query to find an average age of all the applicants from Hungary.
+
+SELECT name, country 
+FROM applicants
+LEFT JOIN countries ON applicants.country_id = countries.id
+WHERE country = 'Hungary' AND age > 40;

@@ -21,9 +21,9 @@ namespace ExamOrientation.Controllers
 
 
         [HttpGet("reports")]
-        public IActionResult GetReports([FromRoute] ReportAPI request)
+        public IActionResult GetReports([FromRoute] ReportFromAPI request)
         {
-            return View();
+            return Ok(reportService.GetReportsForAPI(request));
         }
     }
 }

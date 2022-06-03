@@ -26,7 +26,7 @@ namespace ExamOrientation.Controllers
         public IActionResult Index()
         {
             List<User> users= userService.GetUsers();
-            return View("Index", new VMAddReport() { Users = users , Issue = new List<string>()});
+            return View("Index", new VMAddReport() { Users = users , Issue = new HashSet<string>()});
         }
 
         // Second endpoint - Add Report via POST
@@ -53,6 +53,7 @@ namespace ExamOrientation.Controllers
             int statusCode = reportService.TryToCompleteReport(id, secret);
             return StatusCode(statusCode);
         }
+
 
 
         // Extra endpoint - open adduser page via GET

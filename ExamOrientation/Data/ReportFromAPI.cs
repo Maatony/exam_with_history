@@ -1,6 +1,6 @@
 ﻿namespace ExamOrientation.Data
 {
-    public class ReportAPI
+    public class ReportFromAPI
     {
         public string Manufacturer { get; set; }
         public string Reporter{ get; set; }

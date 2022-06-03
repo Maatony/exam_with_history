@@ -8,5 +8,6 @@ namespace ExamOrientation.Interfaces
     {
         public int TryToCompleteReport(int id, SecretFromBody secret);
         public VMAddReport AddReport(Report report);
+        public ReportsBack GetReportsForAPI(ReportFromAPI request);
     }
 }
